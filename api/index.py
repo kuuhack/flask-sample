@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Flaskパッケージをインポート
-from flask import Flask, request, Response
-import requests
+from flask import Flask, request # , Response
+# import requests
 # from bs4 import BeautifulSoup
 
 # Flaskクラスのインスタンス生成
@@ -11,27 +11,27 @@ app = Flask(__name__)
 # @app.route('/', defaults={'path': ''})
 # @app.route('/<path:path>')
 # def index(path):
-#     """
+#     '''
 #     html = res.text
 #     sorp = BeautifulSoup(html, 'html.parser')
 #     title = sorp.find('title')
 #     return title.text
-#     """
+#     '''
 #     res = requests.get('https://api.github.com/users/taiga-tech')
 #     return res.json()
-
+@app.route('/search', defaults={'path': ''})
 @app.route('/search')
 def analyzer():
-    query = ""
+    query = ''
     if request.args.get('q') is not None:
         query = request.args.get('q')
     else:
-        query = "パラメーターがないよ"
+        query = 'パラメーターがないよ'
     return query
 
-@app.route('/favicon.ico')
-def favicon():
-    return ""
+# @app.route('/favicon.ico')
+# def favicon():
+#     return ''
 
 if __name__ == '__main__':
 	app.run(debug=True)
