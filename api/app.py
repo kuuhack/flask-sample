@@ -28,9 +28,9 @@ def analyzer():
         query = 'パラメーターがないよ'
     return Response(query, mimetype='text/plain')
 
-# @app.route('/favicon.ico')
-# def favicon():
-#     return ''
+@app.route('/favicon.ico')
+def favicon():
+    return ''
 
 if __name__ == '__main__':
 	app.run()
