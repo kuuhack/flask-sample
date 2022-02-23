@@ -25,7 +25,7 @@ def analyzer():
     if request.args.get('q') is not None:
         query = request.args.get('q')
     else:
-        query = 'パラメーターがないよ'
+        query = 'パラメーターがない'
     return Response(query, mimetype='text/plain')
 
 @app.route('/favicon.ico')
