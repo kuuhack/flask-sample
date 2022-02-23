@@ -5,7 +5,7 @@ import requests
 
 app = Flask(__name__) # Flaskクラスのインスタンス生成
 
-@app.route('/') # URLを指定。URLにリクエストが来ると関数が実行される
+@app.route('/', defaults={'path': ''}) # URLを指定。URLにリクエストが来ると関数が実行される
 def index():
     """
     html = res.text
