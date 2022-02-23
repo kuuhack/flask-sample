@@ -8,8 +8,8 @@ from flask import Flask, request # , Response
 app = Flask(__name__)
 
 # URLを指定。URLにリクエストが来ると関数が実行される
-# @app.route('/', defaults={'path': ''})
-# @app.route('/<path:path>')
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
 # def index(path):
 #     '''
 #     html = res.text
@@ -19,9 +19,8 @@ app = Flask(__name__)
 #     '''
 #     res = requests.get('https://api.github.com/users/taiga-tech')
 #     return res.json()
-@app.route('/search/', defaults={'path': ''})
-@app.route('/search/<path:path>')
 def analyzer(path):
+    print(path)
     query = ''
     if request.args.get('q') is not None:
         query = request.args.get('q')
