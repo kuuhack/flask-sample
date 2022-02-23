@@ -19,9 +19,9 @@ app = Flask(__name__)
 #     '''
 #     res = requests.get('https://api.github.com/users/taiga-tech')
 #     return res.json()
-@app.route('/search', defaults={'path': ''})
-@app.route('/search')
-def analyzer():
+@app.route('/search/', defaults={'path': ''})
+@app.route('/search/<path:path>')
+def analyzer(path):
     query = ''
     if request.args.get('q') is not None:
         query = request.args.get('q')
