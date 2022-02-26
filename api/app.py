@@ -1,37 +1,23 @@
 # -*- coding: utf-8 -*-
 # Flaskパッケージをインポート
-from flask import Flask, request , Response
-import requests
-# from bs4 import BeautifulSoup
-# from .gh import ghu
+from flask import Flask, render_template
+
+# import controllers
+from controllers import gh, search, favicon
 
 # Flaskクラスのインスタンス生成
 app = Flask(__name__)
 
-# URLを指定。URLにリクエストが来ると関数が実行される
-@app.route('/<username>')
-def index(username: str):
-    '''
-    html = res.text
-    sorp = BeautifulSoup(html, 'html.parser')
-    title = sorp.find('title')
-    return title.text
-    '''
-    res = requests.get(f'https://api.github.com/users/{username}')
-    return res.json()
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route('/search')
-def analyzer():
-    query = ''
-    if request.args.get('q') is not None:
-        query = request.args.get('q')
-    else:
-        query = 'パラメーターがない'
-    return Response(query, mimetype='text/plain')
+# /api/vi/<username>
+app.register_blueprint(gh.app)
+# /api/v1/search?q=<query>
+app.register_blueprint(search.app)
 
-@app.route('/favicon.ico')
-def favicon():
-    return ''
+app.register_blueprint(favicon.app)
 
 if __name__ == '__main__':
 	app.run()
