@@ -3,7 +3,7 @@
 from flask import Flask, render_template
 
 # import controllers
-from controllers import gh, search, favicon
+# from controllers import gh, search, favicon
 
 # Flaskクラスのインスタンス生成
 app = Flask(__name__)
@@ -12,12 +12,12 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-# /api/vi/<username>
-app.register_blueprint(gh.app)
-# /api/v1/search?q=<query>
-app.register_blueprint(search.app)
+# # /api/vi/<username>
+# app.register_blueprint(gh.app)
+# # /api/v1/search?q=<query>
+# app.register_blueprint(search.app)
 
-app.register_blueprint(favicon.app)
+# app.register_blueprint(favicon.app)
 
 if __name__ == '__main__':
 	app.run()
