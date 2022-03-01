@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 # Flaskパッケージをインポート
 from flask import Flask, render_template
-# import requests
 # import controllers
-from api.controllers import favicon, gh, search
+from .controllers import favicon, gh, search
 
 # Flaskクラスのインスタンス生成
 app = Flask(__name__)
