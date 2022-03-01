@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>flask-sample</title>
+    <title>Flask-sample</title>
     <meta charset="utf-8">
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
-
-    <link
-        rel="stylesheet"
-        href="file:////Users/Taiga/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.1/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css"
-    >
-
     <style>
         /**
-* prism.js Github theme based on GitHub's theme.
-* @author Sam Clarke
-*/
+        * prism.js Github theme based on GitHub's theme.
+        * @author Sam Clarke
+        */
         code[class*="language-"],
         pre[class*="language-"] {
             color: #333;
@@ -820,7 +813,7 @@
 </head>
 
 <body for="html-export">
-    <div class="mume markdown-preview">
+    <div class="mume markdown-preview  ">
         <h1
             class="mume-header"
             id="flask-sample"
@@ -835,14 +828,13 @@
             data-role="codeBlock"
             data-info="shell"
             class="language-shell"
-        >
-<span class="token comment"># &#x4EFB;&#x610F;&#x306E;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x6210;</span>
+        ><span class="token comment"># &#x4EFB;&#x610F;&#x306E;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3092;&#x4F5C;&#x6210;</span>
 <span class="token function">mkdir</span> flask
 
 <span class="token comment"># venv&#x3067;Python3&#x306E;&#x4EEE;&#x60F3;&#x74B0;&#x5883;&#x3092;&#x4F5C;&#x6210;</span>
 python3 -m venv flask
 
-<span class="token comment"># &#x4EEE;&#x60F3;&#x74B0;&#x5883;&#x306E;&#x4E2D;&#x306B;flask&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x30AF;&#x30ED;&#x30FC;&#x30F3;</span>
+<span class="token comment"># &#x4EEE;&#x60F3;&#x74B0;&#x5883;&#x5185;&#x306B;Flask&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x30AF;&#x30ED;&#x30FC;&#x30F3;</span>
 <span class="token builtin class-name">cd</span> flask
 <span class="token function">git</span> clone https://github.com/kuuhack/flask-sample.git
 
@@ -852,11 +844,12 @@ python3 -m venv flask
 <span class="token comment"># &#x4F9D;&#x5B58;&#x95A2;&#x4FC2;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</span>
 pip <span class="token function">install</span> -r requirements.txt
 
-<span class="token comment"># flask &#x30B5;&#x30FC;&#x30D0;&#x958B;&#x59CB; &#x30AA;&#x30FC;&#x30C8;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x4ED8;&#x304D;</span>
+<span class="token comment"># Flask &#x30B5;&#x30FC;&#x30D0;&#x958B;&#x59CB; &#x30AA;&#x30FC;&#x30C8;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x4ED8;&#x304D;</span>
 flask run --debugger --reload
 
 <span class="token comment"># &#x4EEE;&#x60F3;&#x74B0;&#x5883;&#x629C;&#x3051;&#x51FA;&#x3057;</span>
-deactivate</pre>
+deactivate
+</pre>
         <h3
             class="mume-header"
             id="command"
@@ -866,8 +859,16 @@ deactivate</pre>
             data-role="codeBlock"
             data-info="shell"
             class="language-shell"
-        >pip freeze <span class="token operator">&gt;|</span> ./requirements.txt</pre>
+        ><span class="token comment"># &#x73FE;&#x5728;&#x306E;&#x4F9D;&#x5B58;&#x95A2;&#x4FC2;&#x3092;&#x66F8;&#x304D;&#x51FA;&#x3057;</span>
+pip freeze <span class="token operator">&gt;|</span> ./requirements.txt
+</pre>
+        <h2
+            class="mume-header"
+            id="deployment"
+        >Deployment</h2>
+
+        <p><a href="https://vercel.com/">https://vercel.com/</a></p>
+
     </div>
 </body>
-
 </html>
