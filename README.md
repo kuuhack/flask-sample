@@ -9,7 +9,7 @@ mkdir flask
 # venvでPython3の仮想環境を作成
 python3 -m venv flask
 
-# 仮想環境の中にflaskプロジェクトをクローン
+# 仮想環境内にFlaskプロジェクトをクローン
 cd flask
 git clone https://github.com/kuuhack/flask-sample.git
 
@@ -19,7 +19,7 @@ source ../bin/activate
 # 依存関係をインストール
 pip install -r requirements.txt
 
-# flask サーバ開始 オートリロードオプション付き
+# Flask サーバ開始 オートリロードオプション付き
 flask run --debugger --reload
 
 # 仮想環境抜け出し
@@ -29,5 +29,10 @@ deactivate
 ### Command
 
 ```shell
+# 現在の依存関係を書き出し
 pip freeze >| ./requirements.txt
 ```
+
+## Deployment
+
+https://vercel.com/
