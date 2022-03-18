@@ -7,9 +7,9 @@ from .controllers import favicon, gh, search
 # Flaskクラスのインスタンス生成
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
 # /api/vi/<username>
 app.register_blueprint(gh.app)
